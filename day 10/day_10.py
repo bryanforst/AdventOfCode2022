@@ -16,7 +16,7 @@ for l in open("input.txt","rt", encoding="utf8"):
     move = l.strip().split(" ")
     cycle_count+=1
     next_signal = increment_cycle()
-    if move[0]!="noop":
+    if move[0]=="addx":
         cycle_count+=1
         next_signal = increment_cycle()
         register += int(move[1])
